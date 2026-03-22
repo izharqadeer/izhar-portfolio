@@ -1,16 +1,58 @@
-# My Portfolio Wesbite - Overview 🚀
+# Izhar Portfolio
 
-This repository contains the open source version of my porfolio website.
-Do check it out!
+Personal portfolio site built with React and Three.js: scroll-driven sections, a WebGL character scene, and GSAP-powered motion. This repo is the open-source version of the project.
 
-## Instructions 🛠️
+![Portfolio preview](public/images/preview.png)
 
-I have modified the gsap club plugins with the trial plugins, but with the trial plugin you cannot host it🔴. So for Club plugins, Check out here: https://gsap.com/docs/v3/Installation/
+## Features
 
-**Techstack** - React, TypeScript, GSAP, ThreeJS, WebGL, HTML, Css, JavaScript
+- **3D character** — `@react-three/fiber` + `three`, Draco-compressed assets, lazy-loaded for faster first paint
+- **Scroll & UI animation** — GSAP timelines tied to scroll and layout (`@gsap/react`)
+- **Single-page layout** — About, experience, work, tech stack, and contact in one flowing experience
 
-![Portfolio-Preview](public/images/preview.png)
+## Tech stack
+
+| Area        | Tools |
+|------------|--------|
+| App        | React 18, TypeScript, Vite 5 |
+| 3D         | Three.js, React Three Fiber, Drei, postprocessing |
+| Motion     | GSAP, `@gsap/react` |
+| Lint / DX  | ESLint 9, TypeScript ESLint |
+
+## Requirements
+
+- **Node.js** 18+ (20 LTS recommended)
+- **npm** (or pnpm / yarn)
+
+## Getting started
+
+```bash
+# Install dependencies
+npm install
+
+# Dev server (listens on all interfaces — useful on LAN)
+npm run dev
+
+# Production build
+npm run build
+
+# Preview the production build locally
+npm run preview
+
+# Lint
+npm run lint
+```
+
+Open the URL Vite prints (usually `http://localhost:5173`).
+
+## GSAP: Club plugins vs trial
+
+This project can use **GSAP trial** packages for local development. **Trial plugins are not licensed for production hosting.** For a public deploy, use **GSAP Club** plugins and follow the [official installation guide](https://gsap.com/docs/v3/Installation/) so your build complies with GreenSock’s license.
+
+## Environment
+
+Sensitive values belong in `.env` (see `.gitignore`). Do not commit secrets or Club-only plugin sources if they are not meant to be public.
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+MIT — see [LICENSE](LICENSE).
